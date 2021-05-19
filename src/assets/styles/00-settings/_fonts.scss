@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+/* Import
+   ========================================================================== */
+
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap');
+
+    @font-face {
+        font-family: 'Pensum Display';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../fonts/PensumDisplay-Regular.woff2) format('woff2'),
+            url(../fonts/PensumDisplay-Regular.woff) format('woff'),
+            url(../fonts/PensumDisplay-Regular.ttf) format('truetype');
+    }
+
+/* Variables
+   ========================================================================== */
+
+    $font-main: 'Pensum Display', sans-serif;
+    $font-alt: 'Comfortaa', cursive;
+

@@ -1,0 +1,16 @@
+# OS trashes
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+_notes
+
+# vendors
+vendor/
+node_modules/
+npm-debug.log
+
+# build
+build/

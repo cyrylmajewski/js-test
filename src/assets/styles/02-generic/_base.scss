@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/* Body
+   ========================================================================== */
+
+   html, body {
+        overflow-x: hidden;
+        &.blocked {
+            overflow: hidden;
+        }
+    }
+
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        font-family: $font-main;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 100vh;
+        position: relative;
+        object-fit: cover;
+    }
+
+/* Selection
+   ========================================================================== */
+
+    ::selection {
+        background: $color-primary;
+        color: $color-background;
+    }
+
+
+/* WordPress
+   ========================================================================== */
+
+    .customize-support {
+        #wpadminbar {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
