@@ -20,9 +20,11 @@
         font-family: $font-main;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        height: 100vh;
+        height: 100%;
         position: relative;
         object-fit: cover;
+        background: #000;
+        color: #fff;
     }
 
 /* Selection
@@ -43,4 +45,10 @@
                 display: none;
             }
         }
+    }
+
+    .main {
+        height: 100%;
+        width: 100%;
+        font-family: $font-main;
     }

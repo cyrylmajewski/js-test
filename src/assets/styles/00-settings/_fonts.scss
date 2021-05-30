@@ -5,20 +5,10 @@
 /* Import
    ========================================================================== */
 
-    @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap');
-
-    @font-face {
-        font-family: 'Pensum Display';
-        font-style: normal;
-        font-weight: 400;
-        src: url(../fonts/PensumDisplay-Regular.woff2) format('woff2'),
-            url(../fonts/PensumDisplay-Regular.woff) format('woff'),
-            url(../fonts/PensumDisplay-Regular.ttf) format('truetype');
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 /* Variables
    ========================================================================== */
 
-    $font-main: 'Pensum Display', sans-serif;
-    $font-alt: 'Comfortaa', cursive;
+    $font-main: 'Inter', sans-serif;
 

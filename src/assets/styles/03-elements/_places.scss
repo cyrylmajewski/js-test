@@ -1,0 +1,14 @@
+.places {
+    &__container {
+        width: 100%;
+        max-width: 880px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 17px;
+        justify-items: center;
+        justify-content: space-between;
+    }
+}

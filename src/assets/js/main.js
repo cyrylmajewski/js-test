@@ -1,44 +1,42 @@
 // import $ from 'jquery';
 
-$(() => {
-  console.log('test');
-  // SVGInject(document.querySelector("img.injectable"));
+document.addEventListener('DOMContentLoaded', () => {
+    //pop-up
+    const popUp = document.querySelector('.pop-up');
+    const cross = document.querySelector('.pop-up__cross');
+    const edit = document.querySelector('.profile__info-text__link');
 
-  const authBox = $('.auth-box');
-  const loginForm = $('#loginForm');
-  const buttonSend = $('.button--send');
+    //name and description
+    const name = document.querySelector('#name');
+    const description = document.querySelector('#description');
 
-  loginForm.on('submit', function(e) {
-    e.preventDefault();
+    //pop-up elements
+    const inputName = document.querySelector('#nameInput');
+    const inputDesc = document.querySelector('#descInput');
+    const saveButton = document.querySelector('#save');
 
-    var inputs = $($(this).find('.login-form__input'));
-    var error = false;
+    inputName.value = name.innerHTML;
+    inputDesc.value = description.innerHTML;
 
-    inputs.removeClass('error');
-    buttonSend.removeClass('success');
-    buttonSend.addClass('loading');
+    edit.addEventListener('click', (e) => {
+        e.preventDefault();
+        popUp.classList.add('pop-up--active');
+    });
 
-    setTimeout(function() {
-      buttonSend.removeClass('loading');
+    cross.addEventListener('click', (e) => {
+        e.preventDefault();
 
-      inputs.each(function() {
-        if (! $(this).val()) {
-          $(this).addClass('error');
-          error = true;
+        if(popUp.classList.contains('pop-up--active')) {
+            popUp.classList.remove('pop-up--active');
+            inputName.value = name.innerHTML;
+            inputDesc.value = description.innerHTML;
         }
-      });
+    });
 
-      if (error) {
-        authBox.addClass('error');
-
-        setTimeout(function() {
-          authBox.removeClass('error');
-        }, 500);
-      } else {
-        buttonSend.addClass('success');
-        buttonSend.find('.button__text').text('signed in...');
-      }
-    }, 1000);
-  });
-
-})
+    saveButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        name.innerHTML = inputName.value;
+        description.innerHTML = inputDesc.value;
+        popUp.classList.remove('pop-up--active');
+    });
+});

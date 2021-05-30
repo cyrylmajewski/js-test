@@ -1,0 +1,17 @@
+.footer {
+    font-family: $font-main;
+    padding: 67px 0 60px;
+
+    &__container {
+        width: 100%;
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    &__copyright {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #545454;
+    }
+}
